@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class BankNonStrucure {
     public static void main(String[] args) {
         //data
@@ -7,7 +9,39 @@ public class BankNonStrucure {
         //operation: thao tác lên dữ liệu
         //deposit
         // số tiền gửi được nhập từ bàn phím
+        Scanner input = new Scanner(System.in);
+        System.out.print("Nhập số tiền gửi>");
+        int depositAmount = input.nextInt();
+        account_balance += depositAmount;
+
+        //show
+        System.out.println("Thong tin tai khoan: ");
+        System.out.println("Account number: " + account_number);
+        System.out.println("Account balance: " + account_balance);
         
+        //with draw: rut tien
+        int withdrawAmount = 0; 
+        System.out.print(" Nhap so tien muon rut>");
+        withdrawAmount = input.nextInt();
+        account_balance -= withdrawAmount;
+
+        //show
+        System.out.println("Thong tin tai khoan: ");
+        System.out.println("Account number: " + account_number);
+        System.out.println("Account balance: " + account_balance);
+
+        // rut tien
+        System.out.print(" Nhap so tien muon rut>");
+        withdrawAmount = input.nextInt();
+        account_balance -= withdrawAmount;
         
+
+        //show
+        System.out.println("Thong tin tai khoan: ");
+        System.out.println("Account number: " + account_number);
+        System.out.println("Account balance: " + account_balance);
     }
-}
+    
+    }
+
+
